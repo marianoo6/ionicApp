@@ -1,0 +1,17 @@
+<div class="container bg-warning rounded">
+	<div class="row">
+		<h2 class="col-12 text-center bg-secondary rounded ">LISTA DE LA COMPRA</h2>
+		<div  class="col-12 text-center mb-2" *ngFor="let p of arrSelect; let i = index">
+			<div class="row">
+				<button (click)="handleDelete(i)" class="col-2 rounded bg-danger">X</button>
+				<p class="text-left col-6">{{p.producto.nombre}} x {{p.cantidad}}</p>
+				<p class="text-center col-2">{{p.producto.precio}}€/u</p>
+				<p class="text-right col-2">{{p.producto.precio*p.cantidad}}€</p>
+			</div>
+		</div>
+	</div>
+	<div class="row bg-danger rounded mt-2">
+		<h2 class="col-7 text-left ">TOTAL:</h2>
+		<h2 class="col-5 text-right">{{precioTotal}}€</h2>
+	</div>
+</div>

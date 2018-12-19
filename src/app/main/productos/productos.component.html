@@ -1,0 +1,17 @@
+<div class="container bg-warning rounded">
+	<div class="row mb-3">
+		<h2 class="col-12 text-center bg-secondary rounded ">{{titulo}}</h2>
+		<div *ngFor="let p of arrProductos" class="col-4 text-center mb-2">
+			<p>{{p.nombre}}</p>
+			<img (click)="handleClick(p)" class="rounded" [src]="'assets/images/'+p.imagen" alt="">
+		</div>
+	</div>	
+</div>
+
+
+
+
+
+
+
+

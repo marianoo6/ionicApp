@@ -1,0 +1,21 @@
+<div class="container-fluid bg-dark">
+	<h2 class="bg success text-center">TPV LUIS MARIANO MORENO</h2>
+	<div class="container ">
+		<div class="row">
+			<div class="col-8">
+				<app-productos (envioproduct)="handleEnvioProduct($event)" [arrProductos]="arrComida" [titulo]="tituloComida">
+				</app-productos>
+				<app-productos (envioproduct)="handleEnvioProduct($event)" [arrProductos]="arrBebida" [titulo]="tituloBebida"></app-productos>
+			</div>
+			<div class="col-4">
+				<app-lista (borrarProducto)="handleBorrar($event)" [precioTotal] ="precioTotal" [arrSelect]="arrSelect"></app-lista>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
